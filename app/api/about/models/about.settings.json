@@ -1,9 +1,8 @@
 {
-  "kind": "collectionType",
-  "collectionName": "projects",
+  "kind": "singleType",
+  "collectionName": "abouts",
   "info": {
-    "name": "project",
-    "description": ""
+    "name": "about"
   },
   "options": {
     "increments": true,
@@ -15,7 +14,7 @@
       "type": "string",
       "required": true
     },
-    "description": {
+    "info": {
       "type": "text",
       "required": true
     },
@@ -30,26 +29,11 @@
       "plugin": "upload",
       "required": true
     },
-    "github": {
-      "type": "string"
-    },
-    "url": {
-      "type": "string"
-    },
-    "featured": {
-      "type": "boolean",
-      "default": false,
-      "required": true
-    },
     "stack": {
       "type": "component",
       "repeatable": true,
       "component": "description.stack-item",
       "required": true
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
     }
   }
 }
